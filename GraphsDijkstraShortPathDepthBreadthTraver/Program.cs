@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -40,7 +42,7 @@ namespace GraphsDijkstraShortPathDepthBreadthTraver
                 vertex.AdjacencyLinkedList.PrintList();
             }
 
-            verticesList.DepthFirstTraversal();
+            verticesList.DepthFirstTraversal();                       
 
             Console.ReadKey();
         }
@@ -76,8 +78,9 @@ namespace GraphsDijkstraShortPathDepthBreadthTraver
                     }
                 }
 
-            }            
-        }
+            }   
+                                 
+        }              
 
         private Vertex FindNextVertex(Stack<string> stack, Vertex currentVertex, List<Vertex > list)
         {
